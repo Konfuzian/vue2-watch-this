@@ -2,7 +2,8 @@
 
 I challenged myself to create a fully functional webapp within two days.
 
-[<img src="https://ibb.co/QH69tCJ">](https://konfuzian.github.io/vue2-watch-this/)
+[<img src="https://i.ibb.co/dpQBxLf/watch-this.png">](https://konfuzian.github.io/vue2-watch-this/)
+
 [This is the result.](https://konfuzian.github.io/vue2-watch-this/)
 
 The website is implemented using Vue 2 and the Materialize CSS
