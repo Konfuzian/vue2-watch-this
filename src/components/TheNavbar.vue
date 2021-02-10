@@ -39,6 +39,7 @@ export default {};
 
 #logo {
   font-family: "Righteous", cursive;
+  color: #EEE !important;
   background-color: transparent !important;
 }
 </style>
