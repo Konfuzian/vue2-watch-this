@@ -24,7 +24,7 @@ export default {
 
 <style scoped>
 .iframe-container {
-  background: url(./spinner.gif)
+  background: url(https://miro.medium.com/max/1600/1*e_Loq49BI4WmN7o9ItTADg.gif)
     center center no-repeat;
   background-size: contain;
 }

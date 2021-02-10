@@ -52,7 +52,7 @@ export default {
     }, {});
   },
   methods: {
-    moreResults: _.debounce(function (e) {
+    moreResults: _.debounce(function () {
       this.$emit("more-results");
     }, 1000),
   },
