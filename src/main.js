@@ -10,13 +10,14 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({
   mode: "history",
+  base: "/vue2-watch-this/",
   routes: [
     { path: "/", component: Movies },
-    { path: "/about", component: About }
-  ]
+    { path: "/about", component: About },
+  ],
 });
 
 new Vue({
   render: (h) => h(App),
-  router
+  router,
 }).$mount("#app");
