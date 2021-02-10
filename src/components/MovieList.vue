@@ -70,6 +70,7 @@ export default {
   background-color: black;
   border: 1px solid white;
   margin-top: 1rem;
+  padding-bottom: 37px;
 }
 
 .btn:hover {
