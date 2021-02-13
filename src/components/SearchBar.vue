@@ -19,6 +19,9 @@
 
 <script>
 export default {
+  data: () => ({
+    cancel: null,
+  }),
   methods: {
     search(e) {
       if (this.cancel) this.cancel();
