@@ -20,12 +20,15 @@
 <script>
 export default {
   data: () => ({
-    cancel: null,
+    timeout: null,
   }),
   methods: {
     search(e) {
-      if (this.cancel) this.cancel();
-      this.cancel = setTimeout(() => this.$emit("search", e.target.value), 500);
+      if (this.timeout) clearTimeout(this.timeout);
+      this.timeout = setTimeout(
+        () => this.$emit("search", e.target.value),
+        500
+      );
     },
   },
 };
