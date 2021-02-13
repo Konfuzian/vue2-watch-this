@@ -18,7 +18,7 @@
         CodeSandbox
       </a>
       and on
-      <a href="https://github.com/kn0ch3n/vue2-watch-this" target="_blank">
+      <a href="https://github.com/Konfuzian/vue2-watch-this" target="_blank">
         Github</a
       >.
     </p>

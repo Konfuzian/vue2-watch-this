@@ -52,9 +52,13 @@ export default {
     }, {});
   },
   methods: {
-    moreResults: _.debounce(function () {
-      this.$emit("more-results");
-    }, 1000),
+    moreResults: _.debounce(
+      function () {
+        this.$emit("more-results");
+      },
+      1000,
+      { leading: true, trailing: false }
+    ),
   },
 };
 </script>
