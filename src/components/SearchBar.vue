@@ -18,13 +18,12 @@
 </template>
 
 <script>
-import _ from "lodash";
-
 export default {
   methods: {
-    search: _.debounce(function (e) {
-      this.$emit("search", e.target.value);
-    }, 300),
+    search(e) {
+      if (this.cancel) this.cancel();
+      this.cancel = setTimeout(() => this.$emit("search", e.target.value), 500);
+    },
   },
 };
 </script>
@@ -51,7 +50,7 @@ input[type="text"] {
 
 /* icon prefix focus color */
 .input-field .prefix.active {
-  color: #FFF;
+  color: #fff;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
   transition: text-shadow 0.5s ease;
 }
