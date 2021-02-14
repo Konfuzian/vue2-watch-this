@@ -8,7 +8,7 @@
             id="autocomplete_input"
             type="text"
             placeholder="Search for a movie..."
-            @keyup="search"
+            v-model="query"
             @keypress.enter.prevent="(e) => e.target.blur()"
           />
         </div>
@@ -20,15 +20,13 @@
 <script>
 export default {
   data: () => ({
+    query: "",
     timeout: null,
   }),
-  methods: {
-    search(e) {
+  watch: {
+    query(newValue) {
       if (this.timeout) clearTimeout(this.timeout);
-      this.timeout = setTimeout(
-        () => this.$emit("search", e.target.value),
-        500
-      );
+      this.timeout = setTimeout(() => this.$emit("search", newValue), 500);
     },
   },
 };
