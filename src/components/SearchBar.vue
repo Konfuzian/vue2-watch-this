@@ -8,7 +8,7 @@
             id="autocomplete_input"
             type="text"
             placeholder="Search for a movie..."
-            @keyup="search"
+            v-model="query"
             @keypress.enter.prevent="(e) => e.target.blur()"
           />
         </div>
@@ -18,13 +18,15 @@
 </template>
 
 <script>
-import _ from "lodash";
-
 export default {
-  methods: {
-    search(e) {
-      if (this.cancel) this.cancel();
-      this.cancel = setTimeout(() => this.$emit("search", e.target.value), 500);
+  data: () => ({
+    query: "",
+    timeout: null,
+  }),
+  watch: {
+    query(newValue) {
+      if (this.timeout) clearTimeout(this.timeout);
+      this.timeout = setTimeout(() => this.$emit("search", newValue), 500);
     },
   },
 };
